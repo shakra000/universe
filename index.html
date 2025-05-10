@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Explorer | Journey Through the Universe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    
+    <header>
+        <nav>
+            <div class="logo">Cosmic Explorer</div>
+            <ul class="nav-links">
+                <li><a href="#" class="nav-link" data-section="home">Home</a></li>
+                <li><a href="#" class="nav-link" data-section="planets">Planets</a></li>
+                <li><a href="#" class="nav-link" data-section="stars">Stars</a></li>
+                <li><a href="#" class="nav-link" data-section="galaxies">Galaxies</a></li>
+                <li><a href="#" class="nav-link" data-section="explore">Explore</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="active">
+            <div class="hero">
+                <h1 class="title">Journey Through the <span class="cosmic-text">Cosmos</span></h1>
+                <p class="subtitle">Discover the wonders of our universe from the comfort of your screen</p>
+                <button class="explore-btn">Begin Exploration <i class="fas fa-arrow-right"></i></button>
+            </div>
+            
+            <div class="cosmic-facts">
+                <div class="fact-card" data-speed="0.1">
+                    <i class="fas fa-meteor"></i>
+                    <h3>13.8 Billion Years</h3>
+                    <p>The age of our universe since the Big Bang</p>
+                </div>
+                <div class="fact-card" data-speed="0.2">
+                    <i class="fas fa-infinity"></i>
+                    <h3>2 Trillion Galaxies</h3>
+                    <p>Estimated number in the observable universe</p>
+                </div>
+                <div class="fact-card" data-speed="0.3">
+                    <i class="fas fa-expand"></i>
+                    <h3>93 Billion Light-Years</h3>
+                    <p>Diameter of the observable universe</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="planets">
+            <h2 class="section-title">Our <span>Solar System</span></h2>
+            <div class="planet-container">
+                <!-- Planets will be added via JS -->
+            </div>
+            <div class="planet-info">
+                <h3 class="planet-name">Select a Planet</h3>
+                <p class="planet-desc">Click on a planet to learn more about it</p>
+                <div class="planet-stats">
+                    <div class="stat">
+                        <span class="stat-value">--</span>
+                        <span class="stat-name">Distance from Sun</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">--</span>
+                        <span class="stat-name">Diameter</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">--</span>
+                        <span class="stat-name">Orbital Period</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="stars">
+            <h2 class="section-title">Celestial <span>Luminaries</span></h2>
+            <div class="star-gallery">
+                <!-- Stars will be added via JS -->
+            </div>
+            <div class="constellation-container">
+                <canvas id="constellation"></canvas>
+                <div class="constellation-controls">
+                    <button id="connect-stars">Connect Stars</button>
+                    <button id="new-constellation">New Pattern</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="galaxies">
+            <h2 class="section-title">Galactic <span>Wonders</span></h2>
+            <div class="galaxy-slider">
+                <div class="slider-container">
+                    <!-- Galaxies will be added via JS -->
+                </div>
+                <div class="slider-nav">
+                    <button class="prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section id="explore">
+            <h2 class="section-title">Interactive <span>Cosmos</span></h2>
+            <div class="gravity-simulator">
+                <canvas id="gravity-canvas"></canvas>
+                <div class="simulator-controls">
+                    <button id="add-particle">Add Particle</button>
+                    <button id="reset-simulator">Reset</button>
+                    <div class="gravity-slider">
+                        <label for="gravity">Gravity Strength</label>
+                        <input type="range" id="gravity" min="0.1" max="2" step="0.1" value="1">
+                    </div>
+                </div>
+            </div>
+            <div class="cosmic-quiz">
+                <h3>Test Your Cosmic Knowledge</h3>
+                <div class="quiz-container">
+                    <!-- Quiz will be added via JS -->
+                </div>
+                <div class="quiz-result"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Cosmic Explorer</h3>
+                <p>Exploring the wonders of the universe one pixel at a time.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">NASA</a></li>
+                    <li><a href="#">ESA</a></li>
+                    <li><a href="#">Hubble Telescope</a></li>
+                    <li><a href="#">James Webb Space Telescope</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe for cosmic updates</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Cosmic Explorer. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
